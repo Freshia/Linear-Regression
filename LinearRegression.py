@@ -1,5 +1,9 @@
 from statistics import mean
 import numpy as np
+import matplotlib as mpl
+if os.environ.get('DISPLAY','') == '':
+    print('no display found. Using non-interactive Agg backend')
+    mpl.use('Agg')
 import matplotlib.pyplot as plt
 from matplotlib import style
 import random
@@ -27,6 +31,8 @@ def best_fit_slope_and_b(xs,ys):
     return m,b
 
 def squared_error(y_orig,y_line):
+    print("type")
+    print(type(y_orig))
     return sum((y_line-y_orig)**2)
 def coefficient_of_det(y_orig,y_line):
     y_mean_line=[mean(y_orig) for ys in y_orig]
