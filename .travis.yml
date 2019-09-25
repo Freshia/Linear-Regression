@@ -13,6 +13,8 @@ install:
   - pip install codecov
   - pip install --upgrade autopep8
   - pip install statistics
+  - pip install matplotlib
+  - pip install numpy
 # install:
 #   - pip install ".[test]" . # install package + test dependencies
 script: pytest
