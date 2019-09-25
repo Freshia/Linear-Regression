@@ -12,6 +12,7 @@ install:
   - pip install -U pytest
   - pip install codecov
   - pip install --upgrade autopep8
+  - pip install statistics
 # install:
 #   - pip install ".[test]" . # install package + test dependencies
 script: pytest
